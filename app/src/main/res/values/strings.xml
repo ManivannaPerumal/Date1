@@ -1,0 +1,1114 @@
+<resources>
+    <string name="app_name">Date1</string>
+    <string name="select_city">Select City</string>
+    <string name="from">From</string>
+    <string name="to">To:</string>
+    <string name="froma">From:</string>
+    <string name="number_of_rooms">Number Of Rooms:</string>
+    <string name="number_of_adult_child">Number of Adult/Child</string>
+    <string name="submit">Submit</string>
+    <string name="submit2">Submit</string>
+    <string name="hotel_information">Hotel Information</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+
+  <string name="josn">{
+	"hotel-search-response": {
+		"search-criteria": {
+			"booking-date": "2018-09-19+05:30",
+			"check-in-date": "2018-09-20+05:30",
+			"check-out-date": "2018-09-21+05:30",
+			"number-of-rooms": "2",
+			"number-of-nights": "1",
+			"number-of-room-nights": "2",
+			"city": "Mumbai",
+			"state": "Maharashtra",
+			"country": "IN"
+		},
+		"currency": "INR",
+		"base-url": "/places/hotels",
+		"hotels": {
+			"hotel": [	{
+					"hotel-id": "707594",
+					"basic-info": {
+						"hotel-info-copyright": {
+							"__prefix": "hotel-info",
+							"__text": "expedia"
+						},
+						"hotel-name": {
+							"__prefix": "hotel-info",
+							"__text": "Holiday Inn Mumbai International Airport"
+						},
+						"address": {
+							"__prefix": "hotel-info",
+							"__text": "Near Sakinaka Metro Station, Sakinaka Junction, Andheri Kurla Road, Andheri East, Mumbai"
+						},
+						"locality": {
+							"__prefix": "hotel-info",
+							"__text": "Andheri East-International Airport"
+						},
+						"locality-id": {
+							"__prefix": "hotel-info",
+							"__text": "425694"
+						},
+						"locality-latitude": {
+							"__prefix": "hotel-info",
+							"__text": "19.103089"
+						},
+						"locality-longitude": {
+							"__prefix": "hotel-info",
+							"__text": "72.887342"
+						},
+						"city": {
+							"__prefix": "hotel-info",
+							"__text": "Mumbai"
+						},
+						"state": {
+							"__prefix": "hotel-info",
+							"__text": "Maharashtra"
+						},
+						"state-code": {
+							"__prefix": "hotel-info"
+						},
+						"country": {
+							"__prefix": "hotel-info",
+							"__text": "India"
+						},
+						"country-code": {
+							"__prefix": "hotel-info",
+							"__text": "IN"
+						},
+						"zip": {
+							"__prefix": "hotel-info",
+							"__text": "400072"
+						},
+						"rate-info": {
+							"high-rate": {
+								"__prefix": "hotel-info",
+								"__text": "6760.23"
+							},
+							"low-rate": {
+								"__prefix": "hotel-info",
+								"__text": "6760.23"
+							},
+							"currency": {
+								"__prefix": "hotel-info",
+								"__text": "INR"
+							},
+							"rate-disclaimer": {
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"communication-info": {
+							"phone": {
+								"__prefix": "hotel-info",
+								"__text": "2240851800-Work,2261161800-Work,9004617753-Mobile"
+							},
+							"fax": {
+								"__prefix": "hotel-info"
+							},
+							"email": {
+								"__prefix": "hotel-info",
+								"__text": "reservations@himia.in-Work,sarvesh.yadav@ihg.com-Work,reservations.himia@ihg.com-Work,dm@himia.in-Work,team.mumbai@cleartrip.com-Work"
+							},
+							"website": {
+								"__prefix": "hotel-info",
+								"__text": "www.holidayinn.com-Work"
+							},
+							"owner-name": {
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"chain": {
+							"__prefix": "hotel-info",
+							"__text": "Holiday Inn"
+						},
+						"overview": {
+							"__prefix": "hotel-info"
+						},
+						"thumb-nail-image": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-amenities": {
+							"hotel-amenity": [
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "General"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Front Desk"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Security"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Air Conditioning"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Doctor on Call"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Doorman"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Dry Cleaning"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Elevator"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Facilities for Differently Abled"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Housekeeping"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Interconnecting Rooms"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Internet"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Laundry"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Telephone Service"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Wake-up Call Service"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Food  Beverage"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Room Service"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Banquet Hall"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Bar"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Coffee Shop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Lounge"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Restaurant"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Room Service"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Business Services"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Audio Visual Equipment"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Board Room"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Business Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Conference Hall"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "LCD/Projector"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Meeting Room"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Photocopy"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Printer"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Front Desk Services"
+									},
+									"amenities": {
+										"amenity": {
+											"__prefix": "hotel-info",
+											"__text": "Concierge"
+										},
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Travel"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Parking"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Pick  Drop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Porter"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Travel Desk"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Valet Parking"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Recreation"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Fitness Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Garden"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Gift Shop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Massage Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Sauna"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Spa"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Swimming Pool"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Kids"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Babysitting"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Kids Swimming Pool"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								}
+							],
+							"__prefix": "hotel-info"
+						},
+						"is-veg": {
+							"__prefix": "hotel-info",
+							"__text": "Unknown"
+						},
+						"is-on-hold": {
+							"__prefix": "hotel-info",
+							"__text": "0"
+						},
+						"hotel-ratings": {
+							"hotel-rating": {
+								"rating-type": {
+									"__prefix": "hotel-info",
+									"__text": "STAR"
+								},
+								"rating": {
+									"__prefix": "hotel-info",
+									"__text": "4.0"
+								},
+								"total-ratings": {
+									"__prefix": "hotel-info",
+									"__text": "0"
+								},
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"star-rating": {
+							"__prefix": "hotel-info",
+							"__text": "4"
+						},
+						"ct-recommendation": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-usp": {
+							"__prefix": "hotel-info"
+						},
+						"notice": {
+							"__prefix": "hotel-info"
+						},
+						"ct-recommended": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"getaway-property": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"lth-hotel": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"faqs": {
+							"__prefix": "hotel-info"
+						},
+						"restrictions": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-activities": {
+							"__prefix": "hotel-info"
+						},
+						"view-360": {
+							"__prefix": "hotel-info",
+							"__text": "Y"
+						},
+						"supplier-360": {
+							"__prefix": "hotel-info",
+							"__text": "4dea"
+						},
+						"gstin_enabled": {
+							"__prefix": "hotel-info",
+							"__text": "Y"
+						},
+						"gstin": {
+							"__prefix": "hotel-info",
+							"__text": "27AAACS5912L1Z6"
+						},
+						"tds_enabled": {
+							"__prefix": "hotel-info",
+							"__text": "N"
+						},
+						"tds_rate": {
+							"__prefix": "hotel-info"
+						}
+					},
+					"room-rates": {
+						"room-rate": {
+							"room-type": {
+								"room-type-code": "5396526:358551",
+								"room-description": "Superior Room Room Only",
+								"room-type-name": "Superior Room",
+								"room-type-id": "358551"
+							},
+							"rate-breakdown": {
+								"rate": {
+									"date": {
+										"__prefix": "common",
+										"__text": "2018-09-20+05:30"
+									},
+									"pricing-elements": {
+										"pricing-element": [
+											{
+												"category": {
+													"__prefix": "common",
+													"__text": "BF"
+												},
+												"amount": {
+													"__prefix": "common",
+													"__text": "13711.111111111111"
+												},
+												"__prefix": "common"
+											},
+											{
+												"category": {
+													"__prefix": "common",
+													"__text": "TAX"
+												},
+												"amount": {
+													"__prefix": "common",
+													"__text": "3839.1111111111113"
+												},
+												"code": {
+													"__prefix": "common",
+													"__text": "SUP_IGST"
+												},
+												"__prefix": "common"
+											}
+										],
+										"__prefix": "common"
+									},
+									"__prefix": "common"
+								}
+							},
+							"booking-code": "5:33719:5396526|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b",
+							"provisional-booking-required": "false",
+							"rate-type": "SELL",
+							"cancellation-start-time": "2018-09-17+05:30",
+							"inclusions": {
+								"inclusion": [
+									"Breakfast",
+									"Free Wi-Fi",
+									"Complimentary stay for children under 5 without extra bed"
+								]
+							},
+							"currency_code": "INR",
+							"is-package": "false",
+							"package-savings": "0.0",
+							"post-pay": "false",
+							"pah-cc": "false",
+							"base-pkg-diff": "0.0",
+							"merged-rate-ids": "5396526",
+							"base-rate-id": "0",
+							"is-special-rate": "false",
+							"deal-of-the-day": "false",
+							"opaque": "false",
+							"max-adults": "3",
+							"max-children": "1",
+							"max-gst-slab": "28.0"
+						}
+					},
+					"opaque": "false"
+				},	{
+					"hotel-id": "707594",
+					"basic-info": {
+						"hotel-info-copyright": {
+							"__prefix": "hotel-info",
+							"__text": "expedia"
+						},
+						"hotel-name": {
+							"__prefix": "hotel-info",
+							"__text": "Holiday Inn Mumbai International Airport"
+						},
+						"address": {
+							"__prefix": "hotel-info",
+							"__text": "Near Sakinaka Metro Station, Sakinaka Junction, Andheri Kurla Road, Andheri East, Mumbai"
+						},
+						"locality": {
+							"__prefix": "hotel-info",
+							"__text": "Andheri East-International Airport"
+						},
+						"locality-id": {
+							"__prefix": "hotel-info",
+							"__text": "425694"
+						},
+						"locality-latitude": {
+							"__prefix": "hotel-info",
+							"__text": "19.103089"
+						},
+						"locality-longitude": {
+							"__prefix": "hotel-info",
+							"__text": "72.887342"
+						},
+						"city": {
+							"__prefix": "hotel-info",
+							"__text": "Mumbai"
+						},
+						"state": {
+							"__prefix": "hotel-info",
+							"__text": "Maharashtra"
+						},
+						"state-code": {
+							"__prefix": "hotel-info"
+						},
+						"country": {
+							"__prefix": "hotel-info",
+							"__text": "India"
+						},
+						"country-code": {
+							"__prefix": "hotel-info",
+							"__text": "IN"
+						},
+						"zip": {
+							"__prefix": "hotel-info",
+							"__text": "400072"
+						},
+						"rate-info": {
+							"high-rate": {
+								"__prefix": "hotel-info",
+								"__text": "6760.23"
+							},
+							"low-rate": {
+								"__prefix": "hotel-info",
+								"__text": "6760.23"
+							},
+							"currency": {
+								"__prefix": "hotel-info",
+								"__text": "INR"
+							},
+							"rate-disclaimer": {
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"communication-info": {
+							"phone": {
+								"__prefix": "hotel-info",
+								"__text": "2240851800-Work,2261161800-Work,9004617753-Mobile"
+							},
+							"fax": {
+								"__prefix": "hotel-info"
+							},
+							"email": {
+								"__prefix": "hotel-info",
+								"__text": "reservations@himia.in-Work,sarvesh.yadav@ihg.com-Work,reservations.himia@ihg.com-Work,dm@himia.in-Work,team.mumbai@cleartrip.com-Work"
+							},
+							"website": {
+								"__prefix": "hotel-info",
+								"__text": "www.holidayinn.com-Work"
+							},
+							"owner-name": {
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"chain": {
+							"__prefix": "hotel-info",
+							"__text": "Holiday Inn"
+						},
+						"overview": {
+							"__prefix": "hotel-info"
+						},
+						"thumb-nail-image": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-amenities": {
+							"hotel-amenity": [
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "General"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Front Desk"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Security"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Air Conditioning"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Doctor on Call"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Doorman"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Dry Cleaning"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Elevator"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Facilities for Differently Abled"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Housekeeping"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Interconnecting Rooms"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Internet"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Laundry"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Telephone Service"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Wake-up Call Service"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Food  Beverage"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "24 Hour Room Service"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Banquet Hall"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Bar"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Coffee Shop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Lounge"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Restaurant"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Room Service"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Business Services"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Audio Visual Equipment"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Board Room"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Business Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Conference Hall"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "LCD/Projector"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Meeting Room"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Photocopy"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Printer"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Front Desk Services"
+									},
+									"amenities": {
+										"amenity": {
+											"__prefix": "hotel-info",
+											"__text": "Concierge"
+										},
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Travel"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Parking"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Pick  Drop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Porter"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Travel Desk"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Valet Parking"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Recreation"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Fitness Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Garden"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Gift Shop"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Massage Centre"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Sauna"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Spa"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Swimming Pool"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								},
+								{
+									"category": {
+										"__prefix": "hotel-info",
+										"__text": "Kids"
+									},
+									"amenities": {
+										"amenity": [
+											{
+												"__prefix": "hotel-info",
+												"__text": "Babysitting"
+											},
+											{
+												"__prefix": "hotel-info",
+												"__text": "Kids Swimming Pool"
+											}
+										],
+										"__prefix": "hotel-info"
+									},
+									"__prefix": "hotel-info"
+								}
+							],
+							"__prefix": "hotel-info"
+						},
+						"is-veg": {
+							"__prefix": "hotel-info",
+							"__text": "Unknown"
+						},
+						"is-on-hold": {
+							"__prefix": "hotel-info",
+							"__text": "0"
+						},
+						"hotel-ratings": {
+							"hotel-rating": {
+								"rating-type": {
+									"__prefix": "hotel-info",
+									"__text": "STAR"
+								},
+								"rating": {
+									"__prefix": "hotel-info",
+									"__text": "4.0"
+								},
+								"total-ratings": {
+									"__prefix": "hotel-info",
+									"__text": "0"
+								},
+								"__prefix": "hotel-info"
+							},
+							"__prefix": "hotel-info"
+						},
+						"star-rating": {
+							"__prefix": "hotel-info",
+							"__text": "4"
+						},
+						"ct-recommendation": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-usp": {
+							"__prefix": "hotel-info"
+						},
+						"notice": {
+							"__prefix": "hotel-info"
+						},
+						"ct-recommended": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"getaway-property": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"lth-hotel": {
+							"__prefix": "hotel-info",
+							"__text": "false"
+						},
+						"faqs": {
+							"__prefix": "hotel-info"
+						},
+						"restrictions": {
+							"__prefix": "hotel-info"
+						},
+						"hotel-activities": {
+							"__prefix": "hotel-info"
+						},
+						"view-360": {
+							"__prefix": "hotel-info",
+							"__text": "Y"
+						},
+						"supplier-360": {
+							"__prefix": "hotel-info",
+							"__text": "4dea"
+						},
+						"gstin_enabled": {
+							"__prefix": "hotel-info",
+							"__text": "Y"
+						},
+						"gstin": {
+							"__prefix": "hotel-info",
+							"__text": "27AAACS5912L1Z6"
+						},
+						"tds_enabled": {
+							"__prefix": "hotel-info",
+							"__text": "N"
+						},
+						"tds_rate": {
+							"__prefix": "hotel-info"
+						}
+					},
+					"room-rates": {
+						"room-rate": {
+							"room-type": {
+								"room-type-code": "5396526:358551",
+								"room-description": "Superior Room Room Only",
+								"room-type-name": "Superior Room",
+								"room-type-id": "358551"
+							},
+							"rate-breakdown": {
+								"rate": {
+									"date": {
+										"__prefix": "common",
+										"__text": "2018-09-20+05:30"
+									},
+									"pricing-elements": {
+										"pricing-element": [
+											{
+												"category": {
+													"__prefix": "common",
+													"__text": "BF"
+												},
+												"amount": {
+													"__prefix": "common",
+													"__text": "13711.111111111111"
+												},
+												"__prefix": "common"
+											},
+											{
+												"category": {
+													"__prefix": "common",
+													"__text": "TAX"
+												},
+												"amount": {
+													"__prefix": "common",
+													"__text": "3839.1111111111113"
+												},
+												"code": {
+													"__prefix": "common",
+													"__text": "SUP_IGST"
+												},
+												"__prefix": "common"
+											}
+										],
+										"__prefix": "common"
+									},
+									"__prefix": "common"
+								}
+							},
+							"booking-code": "5:33719:5396526|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b",
+							"provisional-booking-required": "false",
+							"rate-type": "SELL",
+							"cancellation-start-time": "2018-09-17+05:30",
+							"inclusions": {
+								"inclusion": [
+									"Breakfast",
+									"Free Wi-Fi",
+									"Complimentary stay for children under 5 without extra bed"
+								]
+							},
+							"currency_code": "INR",
+							"is-package": "false",
+							"package-savings": "0.0",
+							"post-pay": "false",
+							"pah-cc": "false",
+							"base-pkg-diff": "0.0",
+							"merged-rate-ids": "5396526",
+							"base-rate-id": "0",
+							"is-special-rate": "false",
+							"deal-of-the-day": "false",
+							"opaque": "false",
+							"max-adults": "3",
+							"max-children": "1",
+							"max-gst-slab": "28.0"
+						}
+					},
+					"opaque": "false"
+				}]
+		},
+		"_xmlns": "http://www.cleartrip.com/hotel/hotel-search-response",
+		"_xmlns:hotel-info": "http://www.cleartrip.com/places/hotel-info",
+		"_xmlns:common": "http://www.cleartrip.com/hotel/common"
+	}
+}</string>
+    <string name="show_more">Show More</string>
+
+    <string-array name="age">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+</resources>
