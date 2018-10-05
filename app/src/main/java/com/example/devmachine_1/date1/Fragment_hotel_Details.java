@@ -33,6 +33,9 @@ import org.json.XML;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -43,35 +46,36 @@ import okhttp3.Response;
 
 public class Fragment_hotel_Details extends Fragment implements View.OnClickListener {
 
-    String hotelID_String = "", hotelRate_String;
+    String hotelID_String = "", hotelRate_String="";
     String requestJson_String, search_criteria_String, booking_Code;
     //   ArrayList<HashMap<String, String>> contactList;
     private ViewPager mPager;
     int room_price_INT = 0;
-    String[] amenties_Array ;
+    String[] amenties_Array =null ;
     JSONArray hotelDAta_Array;
+    String[] room_Type_Name =null;
     TextView more_Room_cardView ;
     StringBuilder PostItems = new StringBuilder();
     Button hotelBooking_Button;
-    String[] items_StringArray;
+    String[] items_StringArray =null;
 
     LinearLayout mobileCall,amenties_list;
     RatingBar ratingBar;
     int pressed =0;
-    String roomType_code,roomType_Name,room_Prices,room_TAXs;
+    String roomType_code="",roomType_Name="",room_Prices="",room_TAXs="";
     CirclePageIndicator indicator;
     TextView hotelName2, total_Amount, city,showMore_TextView, chckin, room_TAX, chekout, rooms, number_of_nights, number_of_room_nights, area, addresss, desc, room_Price, hotelservice, hotelname, hotelInfo, inclutions, room_Type, languag,languag_Title;
     LinearLayout hotelinfo, websiteURL, direction;
-    String locality_latitude_String, locality_longitude_String, hotel_name_String;
+    String locality_latitude_String="", locality_longitude_String="", hotel_name_String="";
    private ArrayList<String> hotel_ImagesArray = new ArrayList<>();
-    private String websites_String;
+    private String websites_String="";
     String JSONtype ="";
     int pos_int=0;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_hotel_details, container, false);
+        View view = inflater.inflate(R.layout.content_scrolling, container, false);
 
 
         // https://images-eu.ssl-images-amazon.com/images/I/41qepi7gKyL.jpg, https://images-eu.ssl-images-amazon.com/images/I/31saU2ypudL.jpg, https://images-eu.ssl-images-amazon.com/images/I/51O2kbNfhkL.jpg, null];
@@ -202,19 +206,13 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
                 AlertDialog.Builder builder3 = new AlertDialog.Builder(getActivity());
                 builder3.setTitle("Amenties");
-                builder3.setItems(amenties_Array, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        // Do something with the selection
-                        String s = amenties_Array[item];
-                     /*   String number = s.replaceAll("[^0-9]", "");*/
-                        Log.d("Amenties", s);
-                    /*    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                        callIntent.setData(Uri.parse("tel:" + s));
-                        startActivity(callIntent);*/
-
-                        //   Toast.makeText(getActivity(),s,Toast.LENGTH_LONG).show();
-                    }
-                });
+                builder3.setItems(amenties_Array, null);
+          builder3.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+              @Override
+              public void onClick(DialogInterface dialog, int which) {
+                  dialog.dismiss();
+              }
+          });
                 builder3.show();
 
 
@@ -258,19 +256,19 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
             case R.id.Avail_more_room_ID:
 
-                int pos = hotelDAta_Array.length();
+             /*   int pos = hotelDAta_Array.length();
                  String[] items = new String[pos];
                 for(int i=0;i<pos ;i++ ){
                     
                    items[i] = String.valueOf(i);
                    
-                }
+                }*/
 
               
 
                 AlertDialog.Builder builders = new AlertDialog.Builder(getActivity());
-                builders.setTitle("Select");
-                builders.setItems(items, new DialogInterface.OnClickListener() {
+                builders.setTitle("Select Room Type");
+                builders.setItems(room_Type_Name, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         // Do something with the selection
                        // dialog.dismiss();
@@ -295,6 +293,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
         private ProgressDialog pDialog;
         String  chechINdate, checkOUTdate, numberOFrooms, numberOF_roomNights, numberOF_nights, cityName;
         ArrayList amenties = new ArrayList();
+        ArrayList rom_types = new ArrayList();
 
         JSONObject jsonObj = new JSONObject();
         String hotelid, locality, location, star_rating, min_price, address, description, facilities, mobnumber;
@@ -501,8 +500,9 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
                             //   Log.d("arrayarray", String.valueOf(imgs));
 
+                               hotel_ImagesArray.clear();
 
-                            for (int i = 0; i < imgs.length(); i++) {
+                               for (int i = 0; i < imgs.length(); i++) {
 
 
                                 JSONObject c = imgs.getJSONObject(i);
@@ -642,15 +642,22 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
                             hotelDAta_Array = new JSONArray(hotelRate_String);
 
-                            int num =hotelDAta_Array.length();
+                        int num =hotelDAta_Array.length();
 
                             for (int i = 0; i <num ; i++){
 
                                 JSONObject hotelData_Object = hotelDAta_Array.getJSONObject(i);
+                                JSONObject room_type = hotelData_Object.optJSONObject("room-type");
+                                roomType_Name = room_type.optString("room-type-name");
+
+                                rom_types.add(String.valueOf(roomType_Name));
+
+                                Log.d("roomtype", String.valueOf(rom_types));
 
                             }
 
-
+                            room_Type_Name = new String[rom_types.size()];
+                            room_Type_Name = (String[]) rom_types.toArray(room_Type_Name);
 
                             array_Price_selection(0);
                             // for single data temporary
@@ -676,6 +683,10 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
                     try {
                         OkHttpClient client = new OkHttpClient();
+
+                        client = new OkHttpClient.Builder().readTimeout(190000, TimeUnit.MILLISECONDS).writeTimeout(190000, TimeUnit.MILLISECONDS)
+                                .connectTimeout(190000, TimeUnit.MILLISECONDS).build();
+
 
                         MediaType mediaType = MediaType.parse("application/xml");
                         RequestBody body = RequestBody.create(mediaType, requestJson_String);
@@ -791,7 +802,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
                     room_TAX.setText(room_TAXs);
 
                     Log.d("image_Array_new", String.valueOf(hotel_ImagesArray));
-                    pagerinit();
+                    pagerinit(hotel_ImagesArray);
 
                     break;
 
@@ -804,7 +815,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
 
                case "Multiple_Rooms":
 
-                   // array_Price_selection(pos_int);
+
 
 
 
@@ -831,10 +842,12 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
     }
 
 
-    private void pagerinit() {
+    private void pagerinit(ArrayList<String> hotel_ImagesArray) {
 
+         ArrayList<String> hotel_ImagesArray2;
+         hotel_ImagesArray2 = hotel_ImagesArray;
 
-        mPager.setAdapter(new MyPageAdapter(getActivity(), hotel_ImagesArray));
+        mPager.setAdapter(new MyPageAdapter(getActivity(), hotel_ImagesArray2));
 
 
         indicator.setViewPager(mPager);
@@ -968,6 +981,9 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
     public void array_Price_selection(int pos) {
 
         try {
+            PostItems.setLength(0);
+            PostItems = new StringBuilder();
+            room_price_INT = 0;
 
 
             JSONObject hotelData_Object = hotelDAta_Array.getJSONObject(pos);

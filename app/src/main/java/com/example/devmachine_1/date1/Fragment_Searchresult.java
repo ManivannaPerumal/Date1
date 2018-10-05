@@ -30,6 +30,7 @@ import org.json.XML;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -116,6 +117,15 @@ public class Fragment_Searchresult extends Fragment {
             try {
 
                 OkHttpClient client = new OkHttpClient();
+
+                OkHttpClient.Builder builder = new OkHttpClient.Builder();
+                builder.connectTimeout(5, TimeUnit.MINUTES)
+                        .writeTimeout(5, TimeUnit.MINUTES)
+                        .readTimeout(5, TimeUnit.MINUTES);
+
+                client = builder.build();
+              /*  client.setConnectTimeout(30, TimeUnit.SECONDS); // connect timeout
+                clclient.setReadTimeout(30, TimeUnit.SECONDS);*/
 
                 Request request = new Request.Builder()
                         .url("https://apistaging.cleartrip.com/hotels/1.0/search?check-in=" + fromDate_String + "&check-out=" + toDate_String + "&no-of-rooms=2&adults-per-room=2,1&children-per-room=1,0&city=Mumbai&state=Maharashtra&country=IN&scr=INR")
