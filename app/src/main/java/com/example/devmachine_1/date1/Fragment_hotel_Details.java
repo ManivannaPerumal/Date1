@@ -23,6 +23,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.devmachine_1.date1.Adaptor.ItemObject;
 import com.example.devmachine_1.date1.Adaptor.MyPageAdapter;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -33,6 +34,7 @@ import org.json.XML;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -112,7 +114,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
         hotelservice = view.findViewById(R.id.hotelservice);
         hotelBooking_Button = view.findViewById(R.id.hotelBooking_Button);
 
-
+        List<ItemObject> rowListItem = getAllItemList();
 
         more_Room_cardView.setVisibility(View.GONE);
         try {
@@ -1057,6 +1059,21 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private List<ItemObject> getAllItemList(){
+
+        List<ItemObject> allItems = new ArrayList<ItemObject>();
+        allItems.add(new ItemObject("Recharge", R.drawable.ic_call));
+        allItems.add(new ItemObject("Dth", R.drawable.ic_call));
+        allItems.add(new ItemObject("Data", R.drawable.ic_call));
+        allItems.add(new ItemObject("Share Statement", R.drawable.ic_call));
+      /*  allItems.add(new ItemObject("Sb Statement", R.drawable.ic_call));
+        allItems.add(new ItemObject("Deposit Statement", R.drawable.sbstate));
+        allItems.add(new ItemObject("Loan Statement", R.drawable.loan));
+        allItems.add(new ItemObject("Insurance", R.drawable.insurance));*/
+
+        return allItems;
     }
 
 
