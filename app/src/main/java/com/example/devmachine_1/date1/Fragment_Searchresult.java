@@ -42,6 +42,2057 @@ public class Fragment_Searchresult extends Fragment {
     String fromDate_String = "", toDate_String,hotelJSONtype_String,hotelDetails_String;
 
     // String loc;
+
+    String jsons ="{\n" +
+            "\t\"hotel-search-response\": {\n" +
+            "\t\t\"search-criteria\": {\n" +
+            "\t\t\t\"booking-date\": \"2018-09-19+05:30\",\n" +
+            "\t\t\t\"check-in-date\": \"2018-09-20+05:30\",\n" +
+            "\t\t\t\"check-out-date\": \"2018-09-21+05:30\",\n" +
+            "\t\t\t\"number-of-rooms\": \"2\",\n" +
+            "\t\t\t\"number-of-nights\": \"1\",\n" +
+            "\t\t\t\"number-of-room-nights\": \"2\",\n" +
+            "\t\t\t\"city\": \"Mumbai\",\n" +
+            "\t\t\t\"state\": \"Maharashtra\",\n" +
+            "\t\t\t\"country\": \"IN\"\n" +
+            "\t\t},\n" +
+            "\t\t\"currency\": \"INR\",\n" +
+            "\t\t\"base-url\": \"/places/hotels\",\n" +
+            "\t\t\"hotels\": {\n" +
+            "\t\t\t\"hotel\": [\n" +
+            "\t\t\t\t{\n" +
+            "\t\t\t\t\t\"hotel-id\": \"41045\",\n" +
+            "\t\t\t\t\t\"basic-info\": {\n" +
+            "\t\t\t\t\t\t\"hotel-info-copyright\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"trust, trust, trust, trust, trust\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-name\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"The Lalit Mumbai\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"address\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Sahar Airport Road, Andheri East\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Andheri East-International Airport\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-id\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"425694\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-latitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"19.105343\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-longitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"72.875878\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"city\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Mumbai\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Maharashtra\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"India\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"IN\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"zip\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"400059\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"rate-info\": {\n" +
+            "\t\t\t\t\t\t\t\"high-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"10336.25\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"low-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"9086.25\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"currency\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"INR\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"rate-disclaimer\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"communication-info\": {\n" +
+            "\t\t\t\t\t\t\t\"phone\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"2266992222-Switch,2230673301-Switch,9004496910-Mobile\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"fax\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"+91 22 66998888\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"email\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"mumresv@thelalit.com-Work,mumdm@thelalit.com-Work,rahul.nair@cleartrip.com-Work,gnautiyal@thelalit.com-Work,npanvalkar@thelalit.com-Work,moak@thelalit.com-Work,paritoshs@thelalit.com-Work,soniag@thelalit.com-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"website\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"http://www.thelalit.com/the-lalit-mumbai-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"owner-name\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"chain\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"The Lalit Group\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"overview\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"thumb-nail-image\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-amenities\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"General\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Front Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Security\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Air Conditioning\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doctor on Call\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doorman\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Housekeeping\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Internet\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Laundry\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"detailed-amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"name\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Laundry\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"chargeable\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"true\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"price-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"unit-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"misc-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Food & Beverage\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Banquet Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Bar\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Coffee Shop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Patisserie\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Restaurant\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"detailed-amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"name\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Banquet Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"chargeable\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"true\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"price-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"unit-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"misc-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Audio Visual Equipment\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Board Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Conference Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Convention Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Fax\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"LCD/Projector\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Meeting Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Photocopy\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"detailed-amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"name\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"chargeable\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"true\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"price-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"unit-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"misc-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"name\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Meeting Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"chargeable\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"true\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"price-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"unit-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"misc-info\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Front Desk Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Concierge\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Parking\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Pick & Drop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Porter\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Recreation\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Fitness Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Massage Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Nightclub\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Spa\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Babysitting\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-veg\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Unknown\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-on-hold\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\"rating-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"STAR\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"5.0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"total-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"star-rating\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"5\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommendation\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-usp\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"notice\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommended\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"getaway-property\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"lth-hotel\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"faqs\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"restrictions\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-activities\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"view-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"supplier-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"4dea\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"27AAACB1298E1ZV\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"N\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_rate\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"0.0\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"room-rates\": {\n" +
+            "\t\t\t\t\t\t\"room-rate\": {\n" +
+            "\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-code\": \"5255554:29942865318\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-description\": \"Lalit Premier Twin Bed Room Only\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-name\": \"Lalit Premier Room Twin Bed\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-id\": \"29942865318\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"31500.0\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"8820.0\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"booking-code\": \"5:33719:5255554|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-18+05:30\",\n" +
+            "\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\"Breakfast\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Complimentary Two-Way Transfers Airport\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Complimentary stay for children under 10 without extra bed\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"All Applicable Taxes\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Inr 500 spa voucher per room per stay\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"No restaurants will be serving a la cart in the hotel on 31st dec 16\"\n" +
+            "\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\"merged-rate-ids\": \"5255554\",\n" +
+            "\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\"max-children\": \"2\",\n" +
+            "\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"opaque\": \"false\"\n" +
+            "\t\t\t\t},\n" +
+            "\t\t\t\t{\n" +
+            "\t\t\t\t\t\"hotel-id\": \"707594\",\n" +
+            "\t\t\t\t\t\"basic-info\": {\n" +
+            "\t\t\t\t\t\t\"hotel-info-copyright\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"expedia\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-name\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Holiday Inn Mumbai International Airport\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"address\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Near Sakinaka Metro Station, Sakinaka Junction, Andheri Kurla Road, Andheri East, Mumbai\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Andheri East-International Airport\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-id\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"425694\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-latitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"19.103089\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-longitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"72.887342\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"city\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Mumbai\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Maharashtra\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"India\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"IN\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"zip\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"400072\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"rate-info\": {\n" +
+            "\t\t\t\t\t\t\t\"high-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"6760.23\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"low-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"6760.23\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"currency\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"INR\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"rate-disclaimer\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"communication-info\": {\n" +
+            "\t\t\t\t\t\t\t\"phone\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"2240851800-Work,2261161800-Work,9004617753-Mobile\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"fax\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"email\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"reservations@himia.in-Work,sarvesh.yadav@ihg.com-Work,reservations.himia@ihg.com-Work,dm@himia.in-Work,team.mumbai@cleartrip.com-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"website\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"www.holidayinn.com-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"owner-name\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"chain\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Holiday Inn\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"overview\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"thumb-nail-image\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-amenities\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"General\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Front Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Security\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Air Conditioning\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doctor on Call\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doorman\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Dry Cleaning\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Elevator\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Facilities for Differently Abled\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Housekeeping\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Interconnecting Rooms\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Internet\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Laundry\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Telephone Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Wake-up Call Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Food & Beverage\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Banquet Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Bar\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Coffee Shop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Lounge\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Restaurant\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Audio Visual Equipment\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Board Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Conference Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"LCD/Projector\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Meeting Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Photocopy\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Printer\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Front Desk Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Concierge\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Parking\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Pick & Drop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Porter\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Valet Parking\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Recreation\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Fitness Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Garden\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Gift Shop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Massage Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Sauna\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Spa\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Babysitting\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-veg\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Unknown\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-on-hold\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\"rating-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"STAR\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"4.0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"total-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"star-rating\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"4\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommendation\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-usp\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"notice\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommended\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"getaway-property\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"lth-hotel\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"faqs\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"restrictions\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-activities\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"view-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"supplier-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"4dea\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"27AAACS5912L1Z6\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"N\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_rate\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"room-rates\": {\n" +
+            "\t\t\t\t\t\t\"room-rate\": {\n" +
+            "\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-code\": \"5396526:358551\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-description\": \"Superior Room Room Only\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-name\": \"Superior Room\",\n" +
+            "\t\t\t\t\t\t\t\t\"room-type-id\": \"358551\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"13711.111111111111\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"3839.1111111111113\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"booking-code\": \"5:33719:5396526|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-17+05:30\",\n" +
+            "\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\"Breakfast\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"Complimentary stay for children under 5 without extra bed\"\n" +
+            "\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\"merged-rate-ids\": \"5396526\",\n" +
+            "\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\"max-children\": \"1\",\n" +
+            "\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"opaque\": \"false\"\n" +
+            "\t\t\t\t},\n" +
+            "\t\t\t\t{\n" +
+            "\t\t\t\t\t\"hotel-id\": \"41003\",\n" +
+            "\t\t\t\t\t\"basic-info\": {\n" +
+            "\t\t\t\t\t\t\"hotel-info-copyright\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"chmm\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-name\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"The Orchid\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"address\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"70/C, Near Domestic Airport, Nehru road, Vile Parle (East)\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Domestic Airport\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-id\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"293787\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-latitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"19.0969741\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"locality-longitude\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"72.8548827\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"city\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Mumbai\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Maharashtra\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"state-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"India\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"country-code\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"IN\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"zip\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"400099\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"rate-info\": {\n" +
+            "\t\t\t\t\t\t\t\"high-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"12624.35\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"low-rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"5959.83\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"currency\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"INR\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"rate-disclaimer\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"communication-info\": {\n" +
+            "\t\t\t\t\t\t\t\"phone\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"2226164040-Work,9987573878-Mobile\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"fax\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"+91 22 26164141\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"email\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"resota@orchidhotel.com-Work,theo1237@staah.net-Work,resmgr@orchidhotel.com-Work,dm@orchidhotel.com-Work,cm@orchidhotel.com-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"website\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\"__text\": \"www.orchidhotel.com-Work\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"owner-name\": {\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"chain\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Kamat\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"overview\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"The Orchid is strategically located adjacent to the Domestic Airport and 3km from the International Airport. The hotel offers complimentary coach transfers to and from both the airports.\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"thumb-nail-image\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-amenities\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"General\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Front Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Security\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Air Conditioning\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doctor on Call\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Doorman\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Dry Cleaning\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Elevator\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Housekeeping\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Interconnecting Rooms\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Internet\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Laundry\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Telephone Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Wake-up Call Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Food & Beverage\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"24 Hour Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Banquet Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Bar\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Coffee Shop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Lounge\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Patisserie\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Restaurant\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Room Service\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Audio Visual Equipment\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Board Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Business Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Conference Hall\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"LCD/Projector\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Meeting Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Front Desk Services\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Concierge\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Parking\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Pick & Drop\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Porter\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Travel Desk\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Valet Parking\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Recreation\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Fitness Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Jacuzzi\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Massage Centre\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Sauna\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Shopping Arcade\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Spa\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Steam Room\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"amenities\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"amenity\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"Kids Swimming Pool\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-veg\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Unknown\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"is-on-hold\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\"rating-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"STAR\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rating\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"5.0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"total-ratings\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"0\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"star-rating\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"5\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommendation\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-usp\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"One of the pioneers of the eco-friendly initiative in the country, this hotel offers spacious interiors, aesthetically decked with elegant wooden d�cor. Being a stone's throw away from the airport, it is apt for busy corporate travellers and transit passengers.\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"notice\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Property Does Not Accept American Express Credit Card\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"ct-recommended\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"getaway-property\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"lth-hotel\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"false\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-themes\": {\n" +
+            "\t\t\t\t\t\t\t\"hotel-theme\": {\n" +
+            "\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"l\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"name\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"__text\": \"Luxury\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"faqs\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"restrictions\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"hotel-activities\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"view-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"supplier-360\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"4dea\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"Y\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"gstin\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"27AAACK2912L1ZK\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_enabled\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"N\"\n" +
+            "\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\"tds_rate\": {\n" +
+            "\t\t\t\t\t\t\t\"__prefix\": \"hotel-info\",\n" +
+            "\t\t\t\t\t\t\t\"__text\": \"0.0\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"room-rates\": {\n" +
+            "\t\t\t\t\t\t\"room-rate\": [\n" +
+            "\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-code\": \"155244:131984\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-description\": \"Deluxe Room (Room Only)\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-name\": \"Deluxe Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-id\": \"131984\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-282.3300000000001\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUPMKP\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-1599.87\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"19884.5\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"5040.644\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"booking-code\": \"5:33719:155244|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-18+05:30\",\n" +
+            "\t\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"All Applicable Taxes\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Outside food, liquor and beverages will not be permitted in the hotel premises\"\n" +
+            "\t\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"offers\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"offer\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"id\": \"-7456564\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"offer-message\": \"Book 72 hours before check-in and save 10%\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"merged-rate-ids\": \"155244\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-children\": \"2\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-code\": \"76317:131984\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-description\": \"Deluxe Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-name\": \"Deluxe Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-id\": \"131984\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-411.72\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUPMKP\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-1646.88\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"21648.5\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"5485.172\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"booking-code\": \"5:33719:76317|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-18+05:30\",\n" +
+            "\t\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Breakfast\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Complimentary Two-Way Transfers Domestic Airport Only for terminal 1A and 1B\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"All Applicable Taxes\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Outside food, liquor and beverages will not be permitted in the hotel premises\"\n" +
+            "\t\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"offers\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"offer\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"id\": \"-7456564\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"offer-message\": \"Book 72 hours before check-in and save 10%\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"merged-rate-ids\": \"76317\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-children\": \"2\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-code\": \"76319:327600\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-description\": \"ExecutiveRoom-CP\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-name\": \"Executive Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-id\": \"327600\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-326.43000000000006\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUPMKP\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-1849.77\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"22824.5\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"5781.524\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"booking-code\": \"5:33719:76319|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-18+05:30\",\n" +
+            "\t\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Breakfast\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Complimentary Two-Way Transfers Domestic Airport Only for terminal 1A and 1B\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"All Applicable Taxes\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Outside food, liquor and beverages will not be permitted in the hotel premises\"\n" +
+            "\t\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"offers\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"offer\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"id\": \"-7456564\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"offer-message\": \"Book 72 hours before check-in and save 10%\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"merged-rate-ids\": \"76319\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-children\": \"2\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\"room-type\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-code\": \"80320:2679748\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-description\": \"Orchid Club Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-name\": \"Orchid Club Room\",\n" +
+            "\t\t\t\t\t\t\t\t\t\"room-type-id\": \"2679748\"\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"rate-breakdown\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"rate\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"date\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"2018-09-20+05:30\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"pricing-elements\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"pricing-element\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-383.79\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUPMKP\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"DIS\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"-2174.81\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"BF\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"26648.5\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t{\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"category\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"TAX\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"6745.1720000000005\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"code\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"__text\": \"SUP_IGST\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t],\n" +
+            "\t\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"__prefix\": \"common\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"booking-code\": \"5:33719:80320|si-cbc23d4c-c317-4bdc-a5b6-591b381fa92b\",\n" +
+            "\t\t\t\t\t\t\t\t\"provisional-booking-required\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"rate-type\": \"SELL\",\n" +
+            "\t\t\t\t\t\t\t\t\"cancellation-start-time\": \"2018-09-18+05:30\",\n" +
+            "\t\t\t\t\t\t\t\t\"inclusions\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"inclusion\": [\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Breakfast\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Complimentary Two-Way Transfers Domestic & International Airport\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Free Wi-Fi\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"All Applicable Taxes\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"Outside food, liquor and beverages will not be permitted in the hotel premises\"\n" +
+            "\t\t\t\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"offers\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\"offer\": {\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"id\": \"-7456564\",\n" +
+            "\t\t\t\t\t\t\t\t\t\t\"offer-message\": \"Book 72 hours before check-in and save 10%\"\n" +
+            "\t\t\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\t\t\t\"currency_code\": \"INR\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-package\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"package-savings\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"post-pay\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"pah-cc\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-pkg-diff\": \"0.0\",\n" +
+            "\t\t\t\t\t\t\t\t\"merged-rate-ids\": \"80320\",\n" +
+            "\t\t\t\t\t\t\t\t\"base-rate-id\": \"0\",\n" +
+            "\t\t\t\t\t\t\t\t\"is-special-rate\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"deal-of-the-day\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"opaque\": \"false\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-adults\": \"3\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-children\": \"2\",\n" +
+            "\t\t\t\t\t\t\t\t\"max-gst-slab\": \"28.0\"\n" +
+            "\t\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t\t]\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"promo-offers\": {\n" +
+            "\t\t\t\t\t\t\"promo-offer\": {\n" +
+            "\t\t\t\t\t\t\t\"promo-id\": \"-7456564\",\n" +
+            "\t\t\t\t\t\t\t\"offer-key\": \"chmm-offer\",\n" +
+            "\t\t\t\t\t\t\t\"offer-value\": \"{\\\"hd\\\":\\\"Book 72 hours before check-in and save 10%\\\"}\",\n" +
+            "\t\t\t\t\t\t\t\"desc\": \"Book 72 hours before check-in and save 10%\"\n" +
+            "\t\t\t\t\t\t}\n" +
+            "\t\t\t\t\t},\n" +
+            "\t\t\t\t\t\"opaque\": \"false\"\n" +
+            "\t\t\t\t}\n" +
+            "\t\t\t\t\n" +
+            "\t\t\t]\n" +
+            "\t\t},\n" +
+            "\t\t\"_xmlns\": \"http://www.cleartrip.com/hotel/hotel-search-response\",\n" +
+            "\t\t\"_xmlns:hotel-info\": \"http://www.cleartrip.com/places/hotel-info\",\n" +
+            "\t\t\"_xmlns:common\": \"http://www.cleartrip.com/hotel/common\"\n" +
+            "\t}\n" +
+            "}";
     ArrayList<HashMap<String, String>> contactList;
     FragmentTransaction fragmentTransaction;
     Fragment_hotel_Details mani;
@@ -137,8 +2188,12 @@ public class Fragment_Searchresult extends Fragment {
                         .addHeader("Postman-Token", "1b283219-c8b4-4d70-803a-31d95d4793d1")
                         .build();
 
-                Response response = client.newCall(request).execute();
 
+
+
+                Response response = client.newCall(request).execute();
+                int code = response.code();
+                Log.d("process-3","Service code"+String.valueOf(code));
                 Log.d("Process-3", "GET_result _from_server_sucessfully");
 
 
@@ -148,9 +2203,14 @@ public class Fragment_Searchresult extends Fragment {
 
                     Log.d("process-4", result);
 
-                   if(result.isEmpty()) {
+                   if(code != 200) {
 
-                       Log.d("process-4", "inComplete with empty result");
+
+
+
+                       result = jsons;
+                       Log.d("process-4", "inComplete with empty result"+result);
+
                    }
                    else{
 
@@ -248,8 +2308,14 @@ public class Fragment_Searchresult extends Fragment {
                     } else {
                         minRate_String = "0.00";
                     }
+                    String rating;
 
-                    String rating = basic_info.optString("hotel-info:star-rating");
+                    if (basic_info.has("hotel-info:star-rating")) {
+
+                         rating = basic_info.optString("hotel-info:star-rating");
+                    } else {
+                        rating = "0.00";
+                    }
 
 
 

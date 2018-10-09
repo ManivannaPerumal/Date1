@@ -1,6 +1,7 @@
 package com.example.devmachine_1.date1;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +12,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.JsonReader;
 import android.util.Log;
@@ -18,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -60,7 +64,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
     StringBuilder PostItems = new StringBuilder();
     Button hotelBooking_Button;
     String[] items_StringArray =null;
-
+RecyclerView amenties_recyclerview;
     LinearLayout mobileCall,amenties_list;
     RatingBar ratingBar;
     int pressed =0;
@@ -90,6 +94,7 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
         chekout = view.findViewById(R.id.checkout);
         rooms = view.findViewById(R.id.numberofrooms);
         number_of_nights = view.findViewById(R.id.number_of_nights);
+        amenties_recyclerview = view.findViewById(R.id.amenties_recyclerview);
         number_of_room_nights = view.findViewById(R.id.number_of_room_nights);
         languag = view.findViewById(R.id.languages);
         languag_Title = view.findViewById(R.id.languages_title);
@@ -115,6 +120,11 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
         hotelBooking_Button = view.findViewById(R.id.hotelBooking_Button);
 
         List<ItemObject> rowListItem = getAllItemList();
+        amenties_recyclerview.setHasFixedSize(true);
+        amenties_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, true));
+
+        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(getActivity(), rowListItem);
+        amenties_recyclerview.setAdapter(rcAdapter);
 
         more_Room_cardView.setVisibility(View.GONE);
         try {
@@ -1064,16 +1074,68 @@ public class Fragment_hotel_Details extends Fragment implements View.OnClickList
     private List<ItemObject> getAllItemList(){
 
         List<ItemObject> allItems = new ArrayList<ItemObject>();
-        allItems.add(new ItemObject("Recharge", R.drawable.ic_call));
-        allItems.add(new ItemObject("Dth", R.drawable.ic_call));
-        allItems.add(new ItemObject("Data", R.drawable.ic_call));
-        allItems.add(new ItemObject("Share Statement", R.drawable.ic_call));
+        allItems.add(new ItemObject("Wifi", R.drawable.ic_call));
+        allItems.add(new ItemObject("Pool", R.drawable.ic_call));
+        allItems.add(new ItemObject("Ac", R.drawable.ic_call));
+        allItems.add(new ItemObject("Room Services", R.drawable.ic_call));
       /*  allItems.add(new ItemObject("Sb Statement", R.drawable.ic_call));
         allItems.add(new ItemObject("Deposit Statement", R.drawable.sbstate));
         allItems.add(new ItemObject("Loan Statement", R.drawable.loan));
         allItems.add(new ItemObject("Insurance", R.drawable.insurance));*/
 
         return allItems;
+    }
+
+    public  class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        public TextView countryName;
+        public ImageView countryPhoto;
+        String post;
+
+        RecyclerViewHolders(View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(this);
+            countryName = (TextView)itemView.findViewById(R.id.hotel_name);
+            countryPhoto = (ImageView)itemView.findViewById(R.id.imageView);
+
+        }
+
+        @Override
+        public void onClick(View view) {
+            //  Toast.makeText(view.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
+
+
+        }
+    }
+
+    public class RecyclerViewAdapter extends RecyclerView.Adapter<Fragment_hotel_Details.RecyclerViewHolders> {
+
+        private List<ItemObject> itemList;
+        private Context context;
+
+        public RecyclerViewAdapter(Context context, List<ItemObject> itemList) {
+            this.itemList = itemList;
+            this.context = context;
+        }
+
+        @Override
+        public Fragment_hotel_Details.RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
+
+            View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_amenties, null);
+            Fragment_hotel_Details.RecyclerViewHolders rcv = new Fragment_hotel_Details.RecyclerViewHolders(layoutView);
+            return rcv;
+        }
+
+        @Override
+        public void onBindViewHolder(Fragment_hotel_Details.RecyclerViewHolders holder, int position) {
+            holder.countryName.setText(itemList.get(position).getName());
+            holder.countryPhoto.setImageResource(itemList.get(position).getPhoto());
+        }
+
+        @Override
+        public int getItemCount() {
+            return this.itemList.size();
+        }
     }
 
 
